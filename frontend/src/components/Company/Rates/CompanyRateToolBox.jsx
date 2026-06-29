@@ -9,7 +9,7 @@ import { AdditionalDetails } from "./AdditionalDetails";
 import { Routing } from "./Routing";
 import { ElectronicMessages } from "../ElectronicMessages";
 import { Billing } from "./Billing";
-import { Edocs } from "./";
+import { Edocs } from "./eDocs";
 import { Notes } from "./Notes";
 import { Logs } from "./Logs";
 
