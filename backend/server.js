@@ -50,12 +50,6 @@ const PORT = process.env.PORT || 3000;
 
 mongoose.set("bufferCommands", false);
 
-const app        = express();
-const httpServer = createServer(app);
-const PORT       = process.env.PORT || 3000;
-
-mongoose.set("bufferCommands", false);
-
 app.use(
   cors({
     origin: (origin, callback) => {
