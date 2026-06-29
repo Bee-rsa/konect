@@ -10,7 +10,7 @@ import {
   FiThermometer, FiChevronDown, FiChevronUp,
   FiSearch, FiX, FiMapPin,
 } from "react-icons/fi";
-import Navbar from "../components/common/Navbar";
+import Navbar from "../components/Common/Navbar";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 

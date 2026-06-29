@@ -6,7 +6,7 @@ import {
   FiNavigation2, FiStar, FiTruck, FiPackage, FiZap,
   FiArrowLeft, FiClock, FiUsers, FiMapPin, FiCheckCircle,
 } from "react-icons/fi";
-import Navbar from "../components/common/Navbar";
+import Navbar from "../components/Common/Navbar";
 
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_TOKEN;
 
