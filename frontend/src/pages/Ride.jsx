@@ -1,4 +1,4 @@
-import Navbar from "../components/common/Navbar";
+import Navbar from "../components/Common/Navbar";
 import RideSearchBar from "../userComponents/RideSearchBar";
 import { FiArrowRight, FiCheck, FiUsers, FiTruck, FiShield, FiStar } from "react-icons/fi";
 import { Link } from "react-router-dom";
@@ -161,7 +161,7 @@ const Ride = () => {
               Every ride,<br /> built safe
             </h2>
             <p className="text-slate-500 text-sm leading-relaxed max-w-md">
-              Konect Ride is designed with safety at its core. From driver verification to in-app emergency tools, every feature is built to give you confidence — whether you're commuting to work or travelling after hours.
+              Konect Ride is designed with safety at its core. From driver verification to in-app emergency tools, every feature is built to give you confidence — whether you&apos;re commuting to work or travelling after hours.
             </p>
           </div>
         </section>
