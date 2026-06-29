@@ -37,7 +37,7 @@ import AdminHomePage from "./pages/AdminHomePage";
 import CaseStudiesPage from "./pages/CaseStudiesPage";
 import CaseStudyDetailsPage from "./pages/CaseStudyDetailsPage";
 import WeightCalculator from "./pages/Resources/WeightCalculator";
-import MarketForecast from "./pages/Resources/MArketForecast";
+import MarketForecast from "./pages/Resources/MarketForecast";
 import TerminalBerthingPage from "./pages/Konect Core/TerminalBerthingPage";
 import VesselDetailsPage from "./pages/VesselDetailsPage";
 import QuoteResultsPage from "./pages/QuoteResultsPage";

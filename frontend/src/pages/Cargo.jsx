@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import {
   FiShield, FiClipboard, FiDollarSign, FiArrowRight,
 } from "react-icons/fi";
-import Navbar from "../components/common/Navbar";
+import Navbar from "../components/Common/Navbar";
 import SearchBar from "../userComponents/SearchBar";
 import HowItWorks from "../components/Layout/HowItWorks";
 
