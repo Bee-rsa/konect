@@ -36,6 +36,20 @@ const { matchRide } = require("./services/matchingService");
 
 dotenv.config();
 
+dotenv.config();
+
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://konect-rkin.vercel.app",
+  process.env.CLIENT_URL,
+].filter(Boolean);
+
+const app = express();
+const httpServer = createServer(app);
+const PORT = process.env.PORT || 3000;
+
+mongoose.set("bufferCommands", false);
+
 const app        = express();
 const httpServer = createServer(app);
 const PORT       = process.env.PORT || 3000;
@@ -44,8 +58,21 @@ mongoose.set("bufferCommands", false);
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
+    origin: (origin, callback) => {
+      // Allow requests with no origin (Postman, mobile apps, etc.)
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      console.error(`CORS blocked request from: ${origin}`);
+
+      return callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
@@ -54,8 +81,8 @@ app.use(express.urlencoded({ limit: "50mb", extended: true }));
 
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.CLIENT_URL || "http://localhost:5173",
-    methods: ["GET", "POST"],
+    origin: allowedOrigins,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   },
 });
