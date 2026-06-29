@@ -11,7 +11,7 @@ import {
   incrementCaseStudyViews,
   clearCurrentCaseStudy,
 } from "../redux/slices/caseStudySlice";
-import LoadSpinner from "../components/tools/LoadSpinner";
+import LoadSpinner from "../components/Tools/LoadSpinner";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
